@@ -1,0 +1,107 @@
+1.vm to vm file transfer:-
+** Links: 
+ Oracle Virtual Box Latest Version Download Link: https://bit.ly/38C6baX
+ Oracle Virtual Box Older Version (Used in the video) Dowload Link : https://bit.ly/3wFilHW
+ Virtual Machine Disk (VMDK) Link : https://bit.ly/3MDZ940
+
+** To Transfer File From VM1 To VM2:
+ -Commands To Execute on VM1:
+  1. ifconfig
+  2. ls
+  3. touch filename.extension
+  4. cat filename.extension
+  5. nano filename.extension
+  6. cat filename.extension
+  7. scp filename.extension vagrant@ip_address_of_VM2:/home/vagrant
+
+ -Commands To Execute on VM2:
+  1. ifconfig
+  2. ls  OR ls /home/vagrant
+  3. cat filename.extension
+
+
+2.gcloud-sdk
+  first create a folder 
+
+add following files :
+
+1. app.yaml:
+
+runtime: python27
+api_version: 1
+threadsafe: false
+handlers:
+- url: /.*
+  script: index.py
+
+2. index.py
+
+print("hello world");
+
+
+open google cloud sdk shell
+
+1. gcloud init  
+     then login to the email
+
+2. Re-initialize
+3. select email
+4. select existing project or create new
+    
+    Add following command
+
+5. python google-cloud-sdk\bin\dev_appserver.py C:\Users\Asus\Desktop\demo
+
+        if u get error about 8080 binding:
+
+        open cmd as administrator 
+
+        1. netstat -ano | findstr :8080
+        2. taskkill /PID 6404 /F
+
+
+3.google app engine
+1) Open GAE launcher
+
+2) then go to:  edit > preferences  and cheak python path pythonw.exe and gappengine path
+
+3) create a folder on pc 
+
+4) now in GAE laucher click on file tab > create new application > 
+								parent directory = Choose a folder which you created on pc
+                                                cheak = rutnime port and admin port
+
+							click on create then you will see some apps are created in folder
+
+
+5) then select a app and click on run button
+then write localhost:8080 on webbrowser to cheak ouput
+
+
+4.paas
+Go to : https://cloud.google.com/
+
+login
+
+activate cloud shell
+open editor
+
+cloud code
+new application
+cloud run application
+python flask 
+
+cloud code
+deploy to cloud run
+
+cloud code
+run on cloud run emulator
+
+
+5.salesforce
+public class demo1{
+    public static void Demofirst()
+    {
+        system.debug('Hello World');
+    }
+}
